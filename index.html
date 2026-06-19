@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ростелеком — главная</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="container header-inner">
+        <a class="logo" href="index.html">
+            <img class="logo-img" src="images/1.png" alt="Ростелеком">
+        </a>
+
+        <button class="menu-btn" type="button">Меню</button>
+
+        <nav class="nav">
+            <a href="index.html" class="active">Главная</a>
+            <a href="about.html">О компании</a>
+            <a href="services.html">Услуги</a>
+            <a href="connect.html">Акции</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-box">
+                <div class="hero-content">
+                    <span class="badge">Надёжная связь для вашего дома</span>
+                    <h1>Интернет, ТВ и видеонаблюдение в одном месте</h1>
+                    <p class="lead">Подберите оптимальный тариф и отправьте заявку на подключение. Быстро, удобно и без лишних сложностей.</p>
+                    <div class="actions">
+                        <a class="btn btn-primary" href="#request">Оставить заявку</a>
+                        <a class="btn btn-secondary" href="services.html">Посмотреть услуги</a>
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <img src="images/2.jpg" alt="Услуги Ростелеком">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Популярные услуги</h2>
+            </div>
+
+            <div class="grid-3">
+                <div class="card service-card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Интернет</h3>
+                    <p>Стабильное подключение для учёбы, работы и просмотра фильмов.</p>
+                    <div class="price"> 400 ₽/мес</div>
+                    <button class="btn btn-secondary" data-service="Интернет">Выбрать</button>
+                </div>
+
+                <div class="card service-card">
+                    <div class="card-icon">📺</div>
+                    <h3>Телевидение</h3>
+                    <p>Каналы, фильмы и онлайн-сервисы для всей семьи.</p>
+                    <div class="price"> 300 ₽/мес</div>
+                    <button class="btn btn-secondary" data-service="Телевидение">Выбрать</button>
+                </div>
+
+                <div class="card service-card">
+                    <div class="card-icon">🎥</div>
+                    <h3>Видеонаблюдение</h3>
+                    <p>Контроль квартиры, дома или небольшого офиса.</p>
+                    <div class="price"> 350 ₽/мес</div>
+                    <button class="btn btn-secondary" data-service="Видеонаблюдение">Выбрать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="request">
+        <div class="container grid-2">
+            <div>
+                <div class="section-title">
+                    <h2>Как подключиться</h2>
+                </div>
+
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <div><h3>Выбрать услугу</h3><p>Можно выбрать интернет, ТВ, видеонаблюдение или пакет услуг.</p></div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <div><h3>Оставить заявку</h3><p>Нужно указать имя, телефон и адрес подключения.</p></div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <div><h3>Дождаться звонка</h3><p>Специалист уточнит детали и время подключения.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-card">
+    <h2>Оставить заявку</h2>
+    <p class="form-text">Заполните форму, чтобы специалист связался и уточнил детали подключения.</p>
+
+    <form class="form">
+        <div class="form-row">
+            <label>
+                Имя
+                <input type="text" placeholder="Введите имя" required>
+            </label>
+            <label>
+                Телефон
+                <input type="tel" placeholder="+7 (___) ___-__-__" required>
+            </label>
+        </div>
+
+        <div class="form-row">
+            <label>
+                Адрес
+                <input type="text" placeholder="Улица, дом, квартира">
+            </label>
+            <label>
+                Услуга
+                <select id="service" required>
+                    <option value="">Выберите услугу</option>
+                    <option value="Интернет">Интернет</option>
+                    <option value="Телевидение">Телевидение</option>
+                    <option value="Видеонаблюдение">Видеонаблюдение</option>
+                    <option value="Пакет услуг">Пакет услуг</option>
+                </select>
+            </label>
+        </div>
+
+        <label>
+            Комментарий
+            <textarea placeholder="Например: хочу подключить интернет на этой неделе"></textarea>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Отправить заявку</button>
+    </form>
+
+    <div class="form-message">Заявка отправлена. Специалист свяжется с вами для уточнения деталей.</div>
+</div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container footer-inner">
+        <div>
+            <div class="small">© 2026 Учебный сайт. Разработан в рамках производственной практики. Сайт не является официальным сайтом ПАО «Ростелеком».</div>
+        </div>
+        <div class="small">Интернет, ТВ и цифровые услуги</div>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

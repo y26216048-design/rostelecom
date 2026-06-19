@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="container header-inner">
+        <a class="logo" href="index.html">
+            <img class="logo-img" src="images/1.png" alt="Ростелеком">
+        </a>
+
+        <button class="menu-btn" type="button">Меню</button>
+
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О компании</a>
+            <a href="services.html" class="active">Услуги</a>
+            <a href="connect.html">Акции</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="page-head">
+        <div class="container">
+            <h1>Услуги</h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container grid-3">
+            <div class="card service-card">
+                <div class="card-icon">🌐</div>
+                <h3>Домашний интернет</h3>
+                <p>Для учёбы, работы, игр и просмотра видео.</p>
+                <div class="price">от 400 ₽/мес</div>
+                <button class="btn btn-secondary" data-service="Интернет">Выбрать</button>
+            </div>
+            <div class="card service-card">
+                <div class="card-icon">📺</div>
+                <h3>Телевидение</h3>
+                <p>Каналы и онлайн-просмотр на разных устройствах.</p>
+                <div class="price">от 200 ₽/мес</div>
+                <button class="btn btn-secondary" data-service="Телевидение">Выбрать</button>
+            </div>
+            <div class="card service-card">
+                <div class="card-icon">🎥</div>
+                <h3>Видеонаблюдение</h3>
+                <p>Контроль дома, подъезда, офиса или территории.</p>
+                <div class="price">от 250 ₽/мес</div>
+                <button class="btn btn-secondary" data-service="Видеонаблюдение">Выбрать</button>
+            </div>
+            <div class="card service-card">
+                <div class="card-icon">📦</div>
+                <h3>Пакет услуг</h3>
+                <p>Несколько услуг в одном подключении.</p>
+                <div class="price">от 850 ₽/мес</div>
+                <button class="btn btn-secondary" data-service="Пакет услуг">Выбрать</button>
+            </div>
+            <div class="card service-card">
+                <div class="card-icon">🛠</div>
+                <h3>Оборудование</h3>
+                <p>Роутер, ТВ-приставка и другое оборудование.</p>
+                <div class="price">по заявке</div>
+                <a class="btn btn-secondary" href="index.html#request">Оставить заявку</a>
+            </div>
+            <div class="card service-card">
+                <div class="card-icon">☎</div>
+                <h3>Консультация</h3>
+                <p>Помощь в выборе услуги перед подключением.</p>
+                <div class="price">бесплатно</div>
+                <a class="btn btn-secondary" href="index.html#request">Оставить заявку</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="request">
+        <div class="container">
+            <div class="form-card">
+    <h2>Оставить заявку</h2>
+    <p class="form-text">Заполните форму, чтобы специалист связался и уточнил детали подключения.</p>
+
+    <form class="form">
+        <div class="form-row">
+            <label>
+                Имя
+                <input type="text" placeholder="Введите имя" required>
+            </label>
+            <label>
+                Телефон
+                <input type="tel" placeholder="+7 (___) ___-__-__" required>
+            </label>
+        </div>
+
+        <div class="form-row">
+            <label>
+                Адрес
+                <input type="text" placeholder="Улица, дом, квартира">
+            </label>
+            <label>
+                Услуга
+                <select id="service" required>
+                    <option value="">Выберите услугу</option>
+                    <option value="Интернет">Интернет</option>
+                    <option value="Телевидение">Телевидение</option>
+                    <option value="Видеонаблюдение">Видеонаблюдение</option>
+                    <option value="Пакет услуг">Пакет услуг</option>
+                </select>
+            </label>
+        </div>
+
+        <label>
+            Комментарий
+            <textarea placeholder="Например: хочу подключить интернет на этой неделе"></textarea>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Отправить заявку</button>
+    </form>
+
+    <div class="form-message">Заявка отправлена. Специалист свяжется с вами для уточнения деталей.</div>
+</div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container footer-inner">
+        <div>
+<div class="small">© 2026 Учебный сайт. Разработан в рамках производственной практики. Сайт не является официальным сайтом ПАО «Ростелеком».</div>
+        </div>
+        <div class="small">Интернет, ТВ и цифровые услуги</div>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
