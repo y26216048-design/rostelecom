@@ -1,8 +1,3 @@
-/* Убирает 300ms задержку на iOS при тапе */
-* {
-    touch-action: manipulation;
-}
-
 * {
     box-sizing: border-box;
 }

@@ -1,4 +1,3 @@
-// ========== МОБИЛЬНОЕ МЕНЮ ==========
 const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav');
 
@@ -14,8 +13,6 @@ if (menuBtn && nav) {
     });
 }
 
-
-// ========== КНОПКИ УСЛУГ ==========
 const serviceButtons = document.querySelectorAll('[data-service]');
 
 serviceButtons.forEach(button => {
@@ -37,8 +34,6 @@ serviceButtons.forEach(button => {
     });
 });
 
-
-// ========== ФОРМЫ ==========
 const forms = document.querySelectorAll('.form');
 
 forms.forEach(form => {
