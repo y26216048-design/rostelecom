@@ -1,28 +1,48 @@
+// ========== МОБИЛЬНОЕ МЕНЮ ==========
 const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav');
 
+function closeMenu() {
+    if (nav) nav.classList.remove('show');
+}
+
+function openMenu() {
+    if (nav) nav.classList.add('show');
+}
+
 if (menuBtn && nav) {
-    // Переключение меню по клику
-    menuBtn.addEventListener('click', () => {
+    menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // не даём клику "провалиться" в document
         nav.classList.toggle('show');
     });
 
-    // Закрытие меню при клике на ссылку
+    // Закрываем меню при клике на ссылку
     nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-            nav.classList.remove('show');
+            closeMenu();
         });
     });
 
-    // Закрытие меню при клике вне его области (важно для телефонов)
+    // Закрываем при клике вне меню
     document.addEventListener('click', (e) => {
         if (!nav.contains(e.target) && !menuBtn.contains(e.target)) {
-            nav.classList.remove('show');
+            closeMenu();
         }
-    }, { passive: true }); // passive: true убирает предупреждение и лаги scroll на iOS
+    }, { passive: true });
 }
 
-// Кнопки услуг — скролл к форме
+// Фикс iOS bfcache: когда возвращаешься назад — меню уже закрыто
+window.addEventListener('pageshow', () => {
+    closeMenu();
+});
+
+// Фикс: при скролле закрываем меню (удобно на телефоне)
+window.addEventListener('scroll', () => {
+    closeMenu();
+}, { passive: true });
+
+
+// ========== КНОПКИ УСЛУГ ==========
 const serviceButtons = document.querySelectorAll('[data-service]');
 
 serviceButtons.forEach(button => {
@@ -44,7 +64,8 @@ serviceButtons.forEach(button => {
     });
 });
 
-// Отправка форм
+
+// ========== ФОРМЫ ==========
 const forms = document.querySelectorAll('.form');
 
 forms.forEach(form => {
