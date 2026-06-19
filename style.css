@@ -460,7 +460,7 @@ p {
     }
 
     .nav.show {
-        display: flex;
+        display: flex !important;
     }
 
     .nav a {
