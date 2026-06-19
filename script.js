@@ -2,17 +2,27 @@ const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav');
 
 if (menuBtn && nav) {
+    // Переключение меню по клику
     menuBtn.addEventListener('click', () => {
         nav.classList.toggle('show');
     });
 
+    // Закрытие меню при клике на ссылку
     nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             nav.classList.remove('show');
         });
     });
+
+    // Закрытие меню при клике вне его области (важно для телефонов)
+    document.addEventListener('click', (e) => {
+        if (!nav.contains(e.target) && !menuBtn.contains(e.target)) {
+            nav.classList.remove('show');
+        }
+    }, { passive: true }); // passive: true убирает предупреждение и лаги scroll на iOS
 }
 
+// Кнопки услуг — скролл к форме
 const serviceButtons = document.querySelectorAll('[data-service]');
 
 serviceButtons.forEach(button => {
@@ -34,6 +44,7 @@ serviceButtons.forEach(button => {
     });
 });
 
+// Отправка форм
 const forms = document.querySelectorAll('.form');
 
 forms.forEach(form => {
