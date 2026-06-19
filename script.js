@@ -2,44 +2,17 @@
 const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav');
 
-function closeMenu() {
-    if (nav) nav.classList.remove('show');
-}
-
-function openMenu() {
-    if (nav) nav.classList.add('show');
-}
-
 if (menuBtn && nav) {
-    menuBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // не даём клику "провалиться" в document
+    menuBtn.addEventListener('click', () => {
         nav.classList.toggle('show');
     });
 
-    // Закрываем меню при клике на ссылку
     nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-            closeMenu();
+            nav.classList.remove('show');
         });
     });
-
-    // Закрываем при клике вне меню
-    document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && !menuBtn.contains(e.target)) {
-            closeMenu();
-        }
-    }, { passive: true });
 }
-
-// Фикс iOS bfcache: когда возвращаешься назад — меню уже закрыто
-window.addEventListener('pageshow', () => {
-    closeMenu();
-});
-
-// Фикс: при скролле закрываем меню (удобно на телефоне)
-window.addEventListener('scroll', () => {
-    closeMenu();
-}, { passive: true });
 
 
 // ========== КНОПКИ УСЛУГ ==========
